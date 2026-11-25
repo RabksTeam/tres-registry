@@ -1,0 +1,24 @@
+{
+  "id": "example-mod",
+  "type": "mod",
+  "title": "Example Mod",
+  "author": "your-github-username",
+  "description": "وصف مختصر لما يقدمه المود.",
+  "body": "شرح تفصيلي للمميزات وطريقة الاستخدام.",
+  "categories": ["utility"],
+  "license": "MIT",
+  "client_side": "required",
+  "server_side": "optional",
+  "source_url": "https://github.com/your-github-username/example-mod",
+  "versions": [
+    {
+      "id": "1.0.0-neoforge-1.21.1",
+      "name": "v1.0.0",
+      "type": "release",
+      "loaders": ["neoforge"],
+      "game_versions": ["1.21.1"],
+      "file": "https://github.com/your-github-username/example-mod/releases/download/v1.0.0/example-mod-1.0.0.jar",
+      "changelog": "الإصدار الأول"
+    }
+  ]
+}

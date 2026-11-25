@@ -1,0 +1,68 @@
+name: Verify Submission & Source Code
+
+on:
+  pull_request:
+    paths:
+      - 'submissions/*.json'
+
+jobs:
+  verify-submission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+
+      - name: Validate Submission & Verify GitHub Source Repo
+        run: |
+          python3 - << 'EOF'
+          import json, glob, os, urllib.request, urllib.error, re
+
+          files = glob.glob('submissions/*.json')
+          assert files, "لا يوجد ملفات JSON في مجلد submissions/"
+
+          required_fields = ['id', 'type', 'title', 'author', 'description', 'source_url', 'versions']
+          valid_types = {'mod', 'modpack', 'resourcepack', 'shader'}
+
+          for path in files:
+              if os.path.basename(path).startswith('_'):
+                  continue
+              with open(path, 'r', encoding='utf-8') as f:
+                  data = json.load(f)
+
+              for k in required_fields:
+                  assert k in data and data[k], f"[{path}] الحقل الإلزامي مفقود: {k}"
+
+              assert data['type'] in valid_types, f"[{path}] نوع غير مدعوم: {data['type']}"
+              assert re.match(r'^[a-z0-9][a-z0-9-]{1,48}$', data['id']), f"[{path}] صيغة id غير صالحة"
+
+              src_url = data['source_url'].strip().rstrip('/')
+              m = re.match(r'^https://github\.com/([^/]+)/([^/]+)$', src_url)
+              assert m, f"[{path}] رابط الكود المصدري يجب أن يكون بصيغة https://github.com/owner/repo"
+              owner, repo = m.group(1), m.group(2)
+
+              api_url = f"https://api.github.com/repos/{owner}/{repo}"
+              req = urllib.request.Request(api_url, headers={'User-Agent': 'Tres-Registry-Verifier'})
+              with urllib.request.urlopen(req, timeout=15) as resp:
+                  repo_info = json.loads(resp.read().decode())
+                  assert not repo_info.get('private', True), f"[{path}] المستودع خاص! يجب أن يكون عاماً."
+                  assert repo_info.get('size', 0) > 0, f"[{path}] المستودع فارغ ولا يحتوي على كود مصدري!"
+
+              if data['type'] == 'mod':
+                  tree_url = f"https://api.github.com/repos/{owner}/{repo}/contents"
+                  req_tree = urllib.request.Request(tree_url, headers={'User-Agent': 'Tres-Registry-Verifier'})
+                  with urllib.request.urlopen(req_tree, timeout=15) as resp:
+                      root_names = {item['name'].lower() for item in json.loads(resp.read().decode())}
+                      has_build = any(x in root_names for x in {'build.gradle', 'build.gradle.kts', 'pom.xml', 'gradle.properties', 'src'})
+                      assert has_build, f"[{path}] مستودع المود لا يحتوي على ملفات بناء أو مجلد src للكود المصدري!"
+
+              assert isinstance(data['versions'], list) and len(data['versions']) > 0
+              for v in data['versions']:
+                  dl = v.get('file', '').strip()
+                  expected_prefix = f"https://github.com/{owner}/{repo}/releases/"
+                  assert dl.startswith(expected_prefix), f"[{path}] رابط التحميل يجب أن يكون من {expected_prefix}..."
+                  head_req = urllib.request.Request(dl, method='HEAD', headers={'User-Agent': 'Tres-Registry-Verifier'})
+                  with urllib.request.urlopen(head_req, timeout=20) as r:
+                      assert r.status in (200, 302), f"[{path}] رابط التحميل لا يعمل: {dl}"
+
+          print("All submissions verified successfully!")
+          EOF

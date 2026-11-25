@@ -1,0 +1,35 @@
+{
+  "name": "متجر ترس الرسمي (Tres Community Registry)",
+  "version": 1,
+  "updated_at": "2026-11-25T08:00:00Z",
+  "items": [
+    {
+      "id": "spears-addon",
+      "type": "mod",
+      "title": "Spears Addon",
+      "author": "RabksTeam",
+      "description": "إضافة رماح مخصصة مع واجهة تصنيع وبحث داخل اللعبة ودعم كامل للعربية والإنجليزية.",
+      "body": "إضافة تضيف مجموعة متنوعة من الرماح القابلة للتصنيع مع نماذج ثلاثية الأبعاد مخصصة في اليد وواجهة GUI داخل اللعبة.",
+      "categories": ["equipment", "combat", "arabic"],
+      "license": "MIT",
+      "client_side": "required",
+      "server_side": "required",
+      "source_url": "https://github.com/RabksTeam/spears_addon",
+      "verified_source": true,
+      "status": "published",
+      "downloads": 120,
+      "versions": [
+        {
+          "id": "1.0.0-neoforge-1.21.1",
+          "name": "v1.0.0",
+          "type": "release",
+          "loaders": ["neoforge"],
+          "game_versions": ["1.21.1"],
+          "file": "https://github.com/RabksTeam/spears_addon/releases/latest/download/spears_addon-1.0.0.jar",
+          "changelog": "الإصدار الأول الرسمي مع دعم NeoForge 1.21.1.",
+          "date_published": "2026-11-25T08:00:00Z"
+        }
+      ]
+    }
+  ]
+}
