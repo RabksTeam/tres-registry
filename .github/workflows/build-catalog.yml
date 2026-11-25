@@ -31,7 +31,8 @@ jobs:
               if os.path.basename(path).startswith('_'):
                   continue
               sub = json.load(open(path, 'r', encoding='utf-8'))
-              sub['status'] = 'published'
+              req_st = sub.pop('requested_status', 'published')
+              sub['status'] = 'early' if req_st == 'early' else 'published'
               sub['verified_source'] = True
               for v in sub.get('versions', []):
                   v.setdefault('date_published', datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
