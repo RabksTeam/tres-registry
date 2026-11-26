@@ -5,6 +5,7 @@
   "author": "RabksTeam",
   "description": "",
   "body": "",
+  "icon": "https://github.com/RabksTeam/tres-releases/releases/download/mc-explorers-the-distant-lands-assets/mc-explorers-the-distant-lands.jpg",
   "categories": [],
   "license": "MIT",
   "source_url": "https://github.com/RabksTeam/tres-releases",
@@ -35,11 +36,11 @@
       "date_published": "2026-11-25T13:40:47.5843174Z",
       "orig_filename": "MC Explorers - The Distant Lands.mrpack",
       "encrypted": true,
-      "enc_sha256": "7dae93784d9746c3d94130753cd1c649d7c14d9a05f4b2ed7990e356452bcb1d",
+      "enc_sha256": "6a3bd29cecbdcd5aa3cd8f32a3d952100a71b5a02b341ba3bab110e30df9df41",
       "early_grants": [
         {
           "code_hash": "eb0166f8b25a84df8834833c68ffcbbcd0f320bbc687dd4ab7f4f2fc03cc37d5",
-          "vault": "5D06FQVb3IPnPh/ejiC8dHHY8O57sM7z8MTMuFaU1oI+zUGq4sZRa9m+FPGiHkln8ULWlgGqLlpKDFNhXyiA4DB3YNWfO+Aw49yjFtfPQ000GP8UZsqjbKF+zPnuJaQCm8S7XH9LaydWSLQTTnzAgrnFSqn5TNXZYKjsZ7tMW/FnVVIkVtmWWIhpUSlSRLpghmO2tJ02zGW7Xb5khXUIQhB1Nn3V1EVk2E7wDcyZlTtNuHuF7Ymiw/lP+n471PXFe78LPKv29lcpTGmiD65N71cTF2EHStWkO5rJtEJ97Ktqt7/jXLclIQ4w7CzkKGJa4Gygk/yfbzi6gwrXZN5h+pEsuep8Rat2fEL779R/FJ+NpmGv8WvX9J4tWKKJwOP5+EVgtE7VnXwm1jh7WYWFMFGT0h3pLxe6DiQohdKTNQiHJc+Np+BmyiQ="
+          "vault": "ohfZQjNIVprL88yYFeHCQUzMhrqENalkTNFl3etzHr9fbVLG5HsOsdL2Uody0Sjkzpe6xNL4hRPwf86VyFnPrSLQLDLk7Rk3I81xZXWG3+aQ6kQ4nW6bo+amz55w+bEgHd4DoS67JbQ3rfNjvT/9I/4WzR1QIO4ayfhsE8l7izuZvFYchcENzNlLLKWsLXVHEVbWOJlXoZAcSbuZNcVMKb1bZiGPoUfTKlmBmoReiWKfeH9Eip+8/kHQTSsZtqus0bN8n7kvXmtDdDb2Vt3QPKBKkGCOvAv7N+De3Ho+/7ZhtiqCJpk7udDyrfo7C57HC0ujuNV6nKSh4WNZN09/vIK1UZfqnS+P64wCj7ICOZR6I4yFKMQmQ+D7aWEZIVjX3AkGQWYIxR17pyoqrCFCz5UsXlrJ4ssMaf/zVPl2oT8E44nVl3sjDac="
         }
       ]
     }
