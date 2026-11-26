@@ -11,7 +11,6 @@
   "source_url": "https://github.com/RabksTeam/tres-releases",
   "requested_status": "early",
   "early_code_hashes": [
-    "d923b50f49d29b3c4f6e8cbed2d17bf2c36c8968b28ffebad0a2a01fef97ab13",
     "71952b0281a15d909ab5574833fbfe27cd9746f93e20d2c7aa9ec3fb8d1e7fba"
   ],
   "versions": [
@@ -40,12 +39,8 @@
       "enc_sha256": "4187cf3dc6eb0898e2c1b3dcd78b007bcca043fe1453dec05ec7b480ee6f00d9",
       "early_grants": [
         {
-          "code_hash": "d923b50f49d29b3c4f6e8cbed2d17bf2c36c8968b28ffebad0a2a01fef97ab13",
-          "vault": "b0ec2B4NfXvHjTJuKFVtYGeO/SXVuRt8pHyDK5r+ge9Imx1jN8Pag2uJrAyZb0gAQWsScOtC2nAwfWmlRPv3ZKMdZtEXTyzOesrqA4SC0SDMD/YhfFVEmjdhgWRLVihDZK/D5Riw6acqBKyNd2+a2DzOT3GmlVolboomeiBA6jPODIAbYN1GlY57mTVPsTzu3kohHL872cwi0QMvWgMnjPsTAhNdM2zeYobVKT2kuEEDmgofJEGnkPOaH9cdTEj1TOg1fqrHCX8b75Qg3eVvloTy3WHrltxSfT1+NKtpg7YTVVhqFXRTr+rWkby/aa8nuqfipZYY4GjV5vWmdiSS6q3HzzHtxXDeZK6cOeTDvcfuQCF91X/jb0Ec8QYYFzY62f8oyCVSkwGgBFmHJG4ArSEMp//qnbyJeONuX0FC7bmQEIlH6Wu3DASj51gWtw=="
-        },
-        {
           "code_hash": "71952b0281a15d909ab5574833fbfe27cd9746f93e20d2c7aa9ec3fb8d1e7fba",
-          "vault": "BMkkZndhxNLnl3OQecZbnREsPNJlPsTZeO83Iu2j+96LCdV/FgiI15sUq6vVZ8J5fZD27kyZd8Nsnkt23GQl7pMOrYw9+ck+HAphpopfpdPnS9RBLZ+csSdf2ZkZj1mIiN64Sd6X25EXb6iGw/opp7YGg7TjoQCajfGr+LwHnZuUPucXrzn5yTW0weI5KWgOT/IvlPpQ+z3cSu2YMhp+NRlwmTvWjyOlu7Im5Pg/5eTi7bAsOKvYBHKNx3HrjYrO2YxN7luuYOQzh9YDxxjxu0T8lTqjvKQcK3UbMDo7uI4xkS/Gji/91YNln9L5pH70gyOngxWwJCLfE8KmweCQ1W5mbvjfRc3gYMlCYNetCWXz8HsuXZdndUO9oA+j0CHK61zz0pxTUnDC+9qaxKuDcyxup1WsNsz9T6Beqrei8/eYtIXuM1+hmBcv+20kxA=="
+          "vault": "agVWszKHZESB4WpTF44nTEmZMp1hxFWOcFh1HZsfWMMVmYMZLNxfppABdLXrV6csurSEsNKtnEvgN/rnKolTT07Rtl9F+8VA48zTe3S46EYehodl+1QPdB04POadnrO9TbYbLGqWAb67av1BbnfcCpIzBR8JptEkmoG1pV14wTQsipJ3HizKa3Q0mnQUiJm9ApdA3wwkSazMk6JRDzFJav/I5oYkS2YuX2kYAqzJetbudkTe2A/Jf9M6yezdtdb+2xO9eZNB0fvkVjyVgHcmKCC9LF2/7FGX0KeYe/15RJ7uAXmNO2ZugwzmCsQlUSRRkfm1iHmRopxaqeQV7rZ7OwFjVKXXtvJUCTcfY4eDV4E9vHxLFf3Ix45Yac09Ib3WmwkFfLT7mJ/Z9foHF/wjL7fcafsy/VkwBeWBny6Zol6wVtWfySZ8wOdmcP2eVg=="
         }
       ]
     }
