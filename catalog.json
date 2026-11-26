@@ -1,7 +1,7 @@
 {
   "name": "متجر ترس الرسمي (Tres Community Registry)",
   "version": 1,
-  "updated_at": "2026-11-26T08:03:42Z",
+  "updated_at": "2026-11-26T08:07:01Z",
   "items": [
     {
       "id": "spears-addon",
@@ -76,11 +76,11 @@
           "date_published": "2026-11-25T13:40:47.5843174Z",
           "orig_filename": "MC Explorers - The Distant Lands.mrpack",
           "encrypted": true,
-          "enc_sha256": "6a3bd29cecbdcd5aa3cd8f32a3d952100a71b5a02b341ba3bab110e30df9df41",
+          "enc_sha256": "4187cf3dc6eb0898e2c1b3dcd78b007bcca043fe1453dec05ec7b480ee6f00d9",
           "early_grants": [
             {
               "code_hash": "eb0166f8b25a84df8834833c68ffcbbcd0f320bbc687dd4ab7f4f2fc03cc37d5",
-              "vault": "ohfZQjNIVprL88yYFeHCQUzMhrqENalkTNFl3etzHr9fbVLG5HsOsdL2Uody0Sjkzpe6xNL4hRPwf86VyFnPrSLQLDLk7Rk3I81xZXWG3+aQ6kQ4nW6bo+amz55w+bEgHd4DoS67JbQ3rfNjvT/9I/4WzR1QIO4ayfhsE8l7izuZvFYchcENzNlLLKWsLXVHEVbWOJlXoZAcSbuZNcVMKb1bZiGPoUfTKlmBmoReiWKfeH9Eip+8/kHQTSsZtqus0bN8n7kvXmtDdDb2Vt3QPKBKkGCOvAv7N+De3Ho+/7ZhtiqCJpk7udDyrfo7C57HC0ujuNV6nKSh4WNZN09/vIK1UZfqnS+P64wCj7ICOZR6I4yFKMQmQ+D7aWEZIVjX3AkGQWYIxR17pyoqrCFCz5UsXlrJ4ssMaf/zVPl2oT8E44nVl3sjDac="
+              "vault": "L8fJi8Palubl9auQ2eOXQUSB/ViYNwaqO6JkrkSDllS09xlKbpfrneKAZRKInEwbnSFzYAP1bhfYZzobpmACicjtV/KEiod1pQMI9URCiFKNbbQfj8+i1zxIf+8tDO1D48en28AR4tq56epWR4XM+efZh4SB5u5GHIJq7RbgC/Mi3gGg2wHaei0F3lguGrtIIs4xUYRqsxasbVL7KsZ+YW4Wn8Lo3vKR+mNRnBgV5pjqlUFT79ZZCGcCBA5HKisbTjaxNtIB8lh01LS75ige4p0jLJlb9+HdGgA+RbVkFpjyU0NPcNu/IzxS94c4SYVX8Ba2UEGLIjHhJOcuw1DNC1h2kEXbczohDZX6NU4iuZOXSqtL25MnMX+t7FGrEYcOCxBhZTWFqivgdTip4xdAk2o6cy0+a4BlMl090P2DhtFipYAtczIA9yzsO4MUHQ=="
             }
           ]
         }
