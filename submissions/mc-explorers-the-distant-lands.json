@@ -11,7 +11,7 @@
   "source_url": "https://github.com/RabksTeam/tres-releases",
   "requested_status": "early",
   "early_code_hashes": [
-    "eb0166f8b25a84df8834833c68ffcbbcd0f320bbc687dd4ab7f4f2fc03cc37d5"
+    "d923b50f49d29b3c4f6e8cbed2d17bf2c36c8968b28ffebad0a2a01fef97ab13"
   ],
   "versions": [
     {
@@ -39,8 +39,8 @@
       "enc_sha256": "4187cf3dc6eb0898e2c1b3dcd78b007bcca043fe1453dec05ec7b480ee6f00d9",
       "early_grants": [
         {
-          "code_hash": "eb0166f8b25a84df8834833c68ffcbbcd0f320bbc687dd4ab7f4f2fc03cc37d5",
-          "vault": "L8fJi8Palubl9auQ2eOXQUSB/ViYNwaqO6JkrkSDllS09xlKbpfrneKAZRKInEwbnSFzYAP1bhfYZzobpmACicjtV/KEiod1pQMI9URCiFKNbbQfj8+i1zxIf+8tDO1D48en28AR4tq56epWR4XM+efZh4SB5u5GHIJq7RbgC/Mi3gGg2wHaei0F3lguGrtIIs4xUYRqsxasbVL7KsZ+YW4Wn8Lo3vKR+mNRnBgV5pjqlUFT79ZZCGcCBA5HKisbTjaxNtIB8lh01LS75ige4p0jLJlb9+HdGgA+RbVkFpjyU0NPcNu/IzxS94c4SYVX8Ba2UEGLIjHhJOcuw1DNC1h2kEXbczohDZX6NU4iuZOXSqtL25MnMX+t7FGrEYcOCxBhZTWFqivgdTip4xdAk2o6cy0+a4BlMl090P2DhtFipYAtczIA9yzsO4MUHQ=="
+          "code_hash": "d923b50f49d29b3c4f6e8cbed2d17bf2c36c8968b28ffebad0a2a01fef97ab13",
+          "vault": "1NXXUfJ8PT844/tDrxBslZdpqfxqUyPeD1P/Gqu1h5oT3oeF67wHUtag4r+4PpEqpic24jE6fRmhal59W3V15pvuj40Vzybab+8qdiKn+9yfb08oaVgSfrwWkbyL9Ky1MQNhFBfDl/hd+Jv0GbsTT2Dc+BPmzL2JDNPctObLKBQMnKq//aAz0PECUdQRGpwlYClVgTxrEfWdEHNSqA09+1/4wsH4skQCfiVMK/08k+B7p5hNI2oKOXHelgN2HXRWBv3XzGjRdOr6WZnxg/hl7ChGtpgEjnu5UNSnG6SvBzf6bd/oVC0/QKTgzvPeLlvPG0+11d9NweKie9Y8Ufs09V+dlokn/n4lnGqKZkESBAgypHjBR77yBslRyiqrPbUKypP6bW0aZvskaUMOEbQIoaMgcAXPtokh7504z990go/XTHpgtOcrTBcMXTGNiw=="
         }
       ]
     }
