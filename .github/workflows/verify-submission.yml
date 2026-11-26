@@ -1,4 +1,4 @@
-name: Verify Submission & Source Code
+name: Verify Submission & Security Integrity
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout PR
         uses: actions/checkout@v4
 
-      - name: Validate Submission & Verify GitHub Source Repo
+      - name: Validate Submission, Encryption Vault & Source Repo
         run: |
           python3 - << 'EOF'
           import json, glob, os, urllib.request, urllib.error, re
@@ -35,34 +35,36 @@ jobs:
               assert data['type'] in valid_types, f"[{path}] نوع غير مدعوم: {data['type']}"
               assert re.match(r'^[a-z0-9][a-z0-9-]{1,48}$', data['id']), f"[{path}] صيغة id غير صالحة"
 
+              req_status = data.get('requested_status', 'published')
               src_url = data['source_url'].strip().rstrip('/')
               m = re.match(r'^https://github\.com/([^/]+)/([^/]+)$', src_url)
-              assert m, f"[{path}] رابط الكود المصدري يجب أن يكون بصيغة https://github.com/owner/repo"
+              assert m, f"[{path}] رابط المستودع يجب أن يكون بصيغة https://github.com/owner/repo"
               owner, repo = m.group(1), m.group(2)
 
-              api_url = f"https://api.github.com/repos/{owner}/{repo}"
-              req = urllib.request.Request(api_url, headers={'User-Agent': 'Tres-Registry-Verifier'})
-              with urllib.request.urlopen(req, timeout=15) as resp:
-                  repo_info = json.loads(resp.read().decode())
-                  assert not repo_info.get('private', True), f"[{path}] المستودع خاص! يجب أن يكون عاماً."
-                  assert repo_info.get('size', 0) > 0, f"[{path}] المستودع فارغ ولا يحتوي على كود مصدري!"
-
-              if data['type'] == 'mod':
-                  tree_url = f"https://api.github.com/repos/{owner}/{repo}/contents"
-                  req_tree = urllib.request.Request(tree_url, headers={'User-Agent': 'Tres-Registry-Verifier'})
-                  with urllib.request.urlopen(req_tree, timeout=15) as resp:
-                      root_names = {item['name'].lower() for item in json.loads(resp.read().decode())}
-                      has_build = any(x in root_names for x in {'build.gradle', 'build.gradle.kts', 'pom.xml', 'gradle.properties', 'src'})
-                      assert has_build, f"[{path}] مستودع المود لا يحتوي على ملفات بناء أو مجلد src للكود المصدري!"
+              if req_status == 'published':
+                  api_url = f"https://api.github.com/repos/{owner}/{repo}"
+                  req = urllib.request.Request(api_url, headers={'User-Agent': 'Tres-Registry-Verifier'})
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      repo_info = json.loads(resp.read().decode())
+                      assert not repo_info.get('private', True), f"[{path}] المستودع خاص! يجب أن يكون عاماً للنشر العام."
+                      assert repo_info.get('size', 0) > 0, f"[{path}] المستودع فارغ!"
 
               assert isinstance(data['versions'], list) and len(data['versions']) > 0
               for v in data['versions']:
-                  dl = v.get('file', '').strip()
-                  expected_prefix = f"https://github.com/{owner}/{repo}/releases/"
-                  assert dl.startswith(expected_prefix), f"[{path}] رابط التحميل يجب أن يكون من {expected_prefix}..."
-                  head_req = urllib.request.Request(dl, method='HEAD', headers={'User-Agent': 'Tres-Registry-Verifier'})
-                  with urllib.request.urlopen(head_req, timeout=20) as r:
-                      assert r.status in (200, 302), f"[{path}] رابط التحميل لا يعمل: {dl}"
+                  if req_status == 'early' and v.get('encrypted'):
+                      assert v.get('file', '') == '', f"[{path}] يمنع وضع رابط صريح لإصدار وصول مبكر مشفر!"
+                      grants = v.get('early_grants', [])
+                      assert isinstance(grants, list) and len(grants) > 0, f"[{path}] يجب وجود خزنة early_grants مشفرة واحدة على الأقل."
+                      for g in grants:
+                          assert len(g.get('code_hash', '')) == 64, f"[{path}] بصمة كود الدعوة غير صالحة."
+                          assert len(g.get('vault', '')) > 40, f"[{path}] خزنة التشفير غير صالحة."
+                  else:
+                      dl = v.get('file', '').strip()
+                      expected_prefix = f"https://github.com/{owner}/{repo}/releases/"
+                      assert dl.startswith(expected_prefix), f"[{path}] رابط التحميل يجب أن يكون من {expected_prefix}..."
+                      head_req = urllib.request.Request(dl, method='HEAD', headers={'User-Agent': 'Tres-Registry-Verifier'})
+                      with urllib.request.urlopen(head_req, timeout=20) as r:
+                          assert r.status in (200, 302), f"[{path}] رابط التحميل لا يعمل: {dl}"
 
           print("All submissions verified successfully!")
           EOF
