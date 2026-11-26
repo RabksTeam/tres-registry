@@ -1,0 +1,48 @@
+{
+  "id": "mc-explorers-the-distant-lands",
+  "type": "modpack",
+  "title": "MC Explorers - The Distant Lands",
+  "author": "RabksTeam",
+  "description": "",
+  "body": "",
+  "categories": [],
+  "license": "MIT",
+  "source_url": "https://github.com/RabksTeam/tres-releases",
+  "requested_status": "early",
+  "early_code_hashes": [
+    "eb0166f8b25a84df8834833c68ffcbbcd0f320bbc687dd4ab7f4f2fc03cc37d5"
+  ],
+  "versions": [
+    {
+      "id": "1.0.0-neoforge-1.21.1",
+      "name": "1.0.0",
+      "type": "release",
+      "loaders": [
+        "neoforge"
+      ],
+      "game_versions": [
+        "1.21.1"
+      ],
+      "file": "",
+      "sha1": "e0e5651ad83e62614ef26c5419d7c494d6959ec2",
+      "sha256": "d55d4fe8caddab3c888299572dfd61b430b2a8263a9c6520e0a00b406104e59a",
+      "size": 264870988,
+      "changelog": "",
+      "dependencies": [],
+      "loader_versions": {
+        "neoforge": "21.1.227"
+      },
+      "date_published": "2026-11-25T13:40:47.5843174Z",
+      "orig_filename": "MC Explorers - The Distant Lands.mrpack",
+      "encrypted": true,
+      "enc_sha256": "7dae93784d9746c3d94130753cd1c649d7c14d9a05f4b2ed7990e356452bcb1d",
+      "early_grants": [
+        {
+          "code_hash": "eb0166f8b25a84df8834833c68ffcbbcd0f320bbc687dd4ab7f4f2fc03cc37d5",
+          "vault": "5D06FQVb3IPnPh/ejiC8dHHY8O57sM7z8MTMuFaU1oI+zUGq4sZRa9m+FPGiHkln8ULWlgGqLlpKDFNhXyiA4DB3YNWfO+Aw49yjFtfPQ000GP8UZsqjbKF+zPnuJaQCm8S7XH9LaydWSLQTTnzAgrnFSqn5TNXZYKjsZ7tMW/FnVVIkVtmWWIhpUSlSRLpghmO2tJ02zGW7Xb5khXUIQhB1Nn3V1EVk2E7wDcyZlTtNuHuF7Ymiw/lP+n471PXFe78LPKv29lcpTGmiD65N71cTF2EHStWkO5rJtEJ97Ktqt7/jXLclIQ4w7CzkKGJa4Gygk/yfbzi6gwrXZN5h+pEsuep8Rat2fEL779R/FJ+NpmGv8WvX9J4tWKKJwOP5+EVgtE7VnXwm1jh7WYWFMFGT0h3pLxe6DiQohdKTNQiHJc+Np+BmyiQ="
+        }
+      ]
+    }
+  ],
+  "manifest_integrity": "7af50e07c1156977470eb3afd25926d18e2142eaa00ed7213d75779dfd311957"
+}
