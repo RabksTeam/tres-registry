@@ -1,7 +1,7 @@
 {
   "name": "متجر ترس الرسمي (Tres Community Registry)",
   "version": 1,
-  "updated_at": "2026-11-26T08:20:24Z",
+  "updated_at": "2026-11-26T08:20:58Z",
   "items": [
     {
       "id": "spears-addon",
@@ -51,7 +51,8 @@
       "license": "MIT",
       "source_url": "https://github.com/RabksTeam/tres-releases",
       "early_code_hashes": [
-        "d923b50f49d29b3c4f6e8cbed2d17bf2c36c8968b28ffebad0a2a01fef97ab13"
+        "d923b50f49d29b3c4f6e8cbed2d17bf2c36c8968b28ffebad0a2a01fef97ab13",
+        "71952b0281a15d909ab5574833fbfe27cd9746f93e20d2c7aa9ec3fb8d1e7fba"
       ],
       "versions": [
         {
@@ -80,7 +81,11 @@
           "early_grants": [
             {
               "code_hash": "d923b50f49d29b3c4f6e8cbed2d17bf2c36c8968b28ffebad0a2a01fef97ab13",
-              "vault": "0Ixg9i0bPtRDKH4y8IcNPPZacsp/qy239pTyX+GhV0nBMolk6dle/b1I6USr74nU2WfxnviaNMWR53qo4FFecmfliLSJz6HMWdfrFK2KHz6+W+xXUyDi7fLlV/5ZdB53hn64XKfA59GXAFSfY4qLs1StYB/pltrQHZ7kwtMlv7qfKe2SQy912x/86mFpewyfI0eNySVvrCSPMrXM5ErIMG9sGJWG+U69O29DSLFuqv2SW0CLD6c3RXOJ4fVEWukAaJNFZOtyeBffr/NS3L7nIgjTmzFbjAw8IEjIcDCDUXpA1kQlIefOAgnlRWMy9I6TfUhJlHX59EE9gYO4W78qr76fG5XvnnHbaW5zBi9zb7uWbY8OfP2gVQdDgWH6Oh32gGtcjySg5II6Fi3ov5DqLWxqmdLxLyo0tlCYV24ZL9BHzTqUatbxrIaMkkH4qQ=="
+              "vault": "b0ec2B4NfXvHjTJuKFVtYGeO/SXVuRt8pHyDK5r+ge9Imx1jN8Pag2uJrAyZb0gAQWsScOtC2nAwfWmlRPv3ZKMdZtEXTyzOesrqA4SC0SDMD/YhfFVEmjdhgWRLVihDZK/D5Riw6acqBKyNd2+a2DzOT3GmlVolboomeiBA6jPODIAbYN1GlY57mTVPsTzu3kohHL872cwi0QMvWgMnjPsTAhNdM2zeYobVKT2kuEEDmgofJEGnkPOaH9cdTEj1TOg1fqrHCX8b75Qg3eVvloTy3WHrltxSfT1+NKtpg7YTVVhqFXRTr+rWkby/aa8nuqfipZYY4GjV5vWmdiSS6q3HzzHtxXDeZK6cOeTDvcfuQCF91X/jb0Ec8QYYFzY62f8oyCVSkwGgBFmHJG4ArSEMp//qnbyJeONuX0FC7bmQEIlH6Wu3DASj51gWtw=="
+            },
+            {
+              "code_hash": "71952b0281a15d909ab5574833fbfe27cd9746f93e20d2c7aa9ec3fb8d1e7fba",
+              "vault": "BMkkZndhxNLnl3OQecZbnREsPNJlPsTZeO83Iu2j+96LCdV/FgiI15sUq6vVZ8J5fZD27kyZd8Nsnkt23GQl7pMOrYw9+ck+HAphpopfpdPnS9RBLZ+csSdf2ZkZj1mIiN64Sd6X25EXb6iGw/opp7YGg7TjoQCajfGr+LwHnZuUPucXrzn5yTW0weI5KWgOT/IvlPpQ+z3cSu2YMhp+NRlwmTvWjyOlu7Im5Pg/5eTi7bAsOKvYBHKNx3HrjYrO2YxN7luuYOQzh9YDxxjxu0T8lTqjvKQcK3UbMDo7uI4xkS/Gji/91YNln9L5pH70gyOngxWwJCLfE8KmweCQ1W5mbvjfRc3gYMlCYNetCWXz8HsuXZdndUO9oA+j0CHK61zz0pxTUnDC+9qaxKuDcyxup1WsNsz9T6Beqrei8/eYtIXuM1+hmBcv+20kxA=="
             }
           ]
         }
